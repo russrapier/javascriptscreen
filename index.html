@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script defer src="js/script.js"></script>
+    <script defer src="js/ttt.js"></script>
+    <script defer src="js/slider.js"></script>
+    <script defer src="js/todo.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/slider.css" />
+    <link rel="stylesheet" type="text/css" href="css/ttt.css" />
+    <link rel="stylesheet" type="text/css" href="css/todo.css" />
+
+    <title>Multi-project</title>
+  </head>
+  <header class="header">Play with Javascript</header>
+  <body>
+    <div class="windows">
+      <div class="window1">
+        <button class="btn btn--show-modal-1">To-Do</button>
+        <div class="modal-1 modal hidden">
+          <button class="btn--close-modal-1">&times;</button>
+          <h2 class="modal__header-1">To-Do</h2>
+          <div class="new-task">
+            <input type="text" placeholder="New Task" />
+            <button class="push">
+              Add <ion-icon class="add" name="add-outline"></ion-icon>
+            </button>
+            <div class="tasks"></div>
+          </div>
+        </div>
+        <div class="overlay-1 hidden"></div>
+      </div>
+
+      <div class="window2">
+        <button class="close-btn btn btn--show-modal2">Pagination</button>
+        <div class="modal2 modal hidden">
+          <button class="btn--close-modal2">&times;</button>
+          <h2 class="modal__header">Pagination</h2>
+          <div class="slider">
+            <div class="slide">
+              <img class="img" alt="waterfall" src="img/slide-1.jpg" />
+            </div>
+            <div class="slide">
+              <img class="img" alt="sand dune" src="img/slide-2.jpg" />
+            </div>
+            <div class="slide">
+              <img class="img" alt="leaf" src="img/slide-3.jpg" />
+            </div>
+            <div class="slide">
+              <img class="img" alt="galaxy" src="img/slide-4.jpg" />
+            </div>
+            <div class="slide">
+              <img class="img" alt="volvanic land" src="img/slide-5.jpg" />
+            </div>
+          </div>
+          <button class="slider__btn slider__btn--left">&larr;</button>
+          <button class="slider__btn slider__btn--right">&rarr;</button>
+          <div class="dots"></div>
+        </div>
+        <div class="overlay2 hidden"></div>
+      </div>
+
+      <div class="window4">
+        <button class="btn btn--show-modal4">Tic-Tac-Toe</button>
+        <div class="modal4 modal hidden">
+          <button class="close-btn btn--close-modal4">&times;</button>
+          <h2 class="modal__header">Tic-Tac-Toe</h2>
+          <p id="ins">
+            Game starts by just Tap on box<br /><br />First Player starts as
+            <b>Player X</b><br />And<br />Second Player as <b>Player 0</b>
+          </p>
+
+          <br /><br />
+          <!-- 3*3 grid of Boxes -->
+          <input type="text" id="b1" onclick="myfunc_3(); myfunc();" readonly />
+
+          <input type="text" id="b2" onclick="myfunc_4(); myfunc();" readonly />
+
+          <input type="text" id="b3" onclick="myfunc_5(); myfunc();" readonly />
+          <br /><br />
+
+          <input type="text" id="b4" onclick="myfunc_6(); myfunc();" readonly />
+          <input type="text" id="b5" onclick="myfunc_7(); myfunc();" readonly />
+
+          <input type="text" id="b6" onclick="myfunc_8(); myfunc();" readonly />
+          <br /><br />
+
+          <input type="text" id="b7" onclick="myfunc_9(); myfunc();" readonly />
+
+          <input type="text" id="b8" onclick="myfunc_10();myfunc();" readonly />
+
+          <input type="text" id="b9" onclick="myfunc_11();myfunc();" readonly />
+
+          <!-- Grid end here  -->
+          <br /><br /><br />
+          <!-- Button to reset game -->
+          <button id="but" onclick="myfunc_2()">RESET</button>
+
+          <br /><br />
+          <!-- Space to show player turn -->
+          <p id="print"></p>
+        </div>
+        <div class="overlay4 hidden"></div>
+      </div>
+    </div>
+  </body>
+</html>
